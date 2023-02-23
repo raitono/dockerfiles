@@ -4,8 +4,10 @@ EXPOSE 8080
 EXPOSE 50000
 USER root
 
-# Install .Net
-RUN apk -U add dotnet7-sdk
+RUN addgroup jenkins root
+
+# Install .Net and Docker
+RUN apk -U add dotnet7-sdk docker docker-compose openssl
 
 # Good idea to switch back to the jenkins user.
 USER jenkins
