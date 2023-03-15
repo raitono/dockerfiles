@@ -9,6 +9,5 @@ services:
       - jenkins_home:/var/jenkins_home
       - //var/run/docker.sock:/var/run/docker.sock
       - ${JENKINS_ENV}:/var/jenkins_home/.env
-      - ${JENKINS_HTTPS_CANNALOG}:/var/jenkins_home/.env/https/cannalog
 volumes:
   jenkins_home:
