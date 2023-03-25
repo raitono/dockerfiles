@@ -7,7 +7,7 @@ USER root
 RUN addgroup jenkins root
 
 # Install .Net and Docker
-RUN apk -U add dotnet7-sdk docker docker-compose openssl
+RUN apk -U add dotnet7-sdk docker docker-compose openssl npm
 
 # Good idea to switch back to the jenkins user.
 USER jenkins
